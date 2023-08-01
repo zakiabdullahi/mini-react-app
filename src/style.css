@@ -13,7 +13,8 @@ header {
   height: 80px;
 }
 .container {
-  max-width: 1110px;
+  /* max-width: 1110px; */
+  width: min(90%, 1110px);
   margin: 0px auto;
 }
 .header ul {
@@ -38,4 +39,32 @@ header {
 }
 .hero p {
   width: 80%;
+}
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.right > * {
+  margin: 20px 0px;
+}
+.btn {
+  width: 20%;
+  padding: 10px 15px;
+  border: 10px;
+  background-color: #66ceab;
+  color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+  .hero {
+    flex-direction: column;
+  }
+  .btn {
+    width: 100%;
+  }
+
+  .header ul {
+    display: none;
+  }
 }
